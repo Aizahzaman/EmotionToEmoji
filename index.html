@@ -1,0 +1,76 @@
+ 
+<html>
+  <head>
+    <title>Emotion To Emoji</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+  <div class="container">
+  
+    <center>
+      <h1 style="background-color: aqua; color: cadetblue; width: 50%; height:100px; padding: 10px; border:5px groove greenyellow; border-radius: 15px;">Emotion to Emoji <br> 😃 😭 😡 😌 🙁</h1>
+  
+
+      <i><p style="font-size: 30px; color: hotpink;">Take your selfie to generate emoji</p></i>
+        <br>
+        <p>
+        <b style="color: yellowgreen; font-size: 23px;">Are you Happy?</b>
+        <br>
+        <b style="color: lightskyblue; font-size: 23px;">Are you Sad?</b>
+        <br>
+        <b style="color: red; font-size: 23px;">Are you Angry?</b>
+        <br>
+        <b style="color: orange; font-size: 23px;">Are you Calm?</b>
+        <br>
+      </p>
+      <br>
+      <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label class="labels">~ Camera ~ </label>
+        <div id="camera"></div>
+        <br>
+        <button class="btn btn-default" onclick="take_picture()">Take Photo</button>
+        <br><br>
+
+      </div>
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+
+        <label class="labels">Prediction 1: </label>
+        <h4 class="emotion_name" id="result_emotion_name"></h4>
+        <h3 id="result_emoji" class="emoji"></h3>
+
+        <label class="labels">Prediction 2: </label>
+        <h4 class="emotion_name" id="result_emotion_name2"></h4>
+        <h3 id="result_emoji2" class="emoji"></h3>
+
+        <br><br>
+
+      </div>
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label class="labels">~ Snapshot ~ </label>
+        <div id="result"></div>
+        <br>
+        <button class="btn btn-default" onclick="check()">Identify Emotion</button>
+
+      </div>
+
+    </center>
+
+  </div>
+
+<script src="main.js"></script>
+
+  </body>
+</html>
+
+ 
